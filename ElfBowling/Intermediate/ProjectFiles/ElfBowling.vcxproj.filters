@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\ElfBowling.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{F334E437-5965-405B-BB7C-210F874707F6}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\ElfBowling.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\ElfBowlingEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{91889169-9F3E-4184-8402-C5847FE9DDD2}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\ElfBowling">
+			<UniqueIdentifier>{D22CE9CE-155E-46F8-A829-6EEC1C99046D}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\ElfBowling\ElfBowling.Build.cs">
+			<Filter>Source\ElfBowling</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\ElfBowling\ElfBowling.cpp">
+			<Filter>Source\ElfBowling</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\ElfBowling\ElfBowling.h">
+			<Filter>Source\ElfBowling</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\ElfBowling\ElfBowlingGameModeBase.cpp">
+			<Filter>Source\ElfBowling</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\ElfBowling\ElfBowlingGameModeBase.h">
+			<Filter>Source\ElfBowling</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

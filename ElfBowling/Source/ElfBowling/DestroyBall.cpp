@@ -12,7 +12,7 @@ ADestroyBall::ADestroyBall()
 
 	BoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent"));
 	BoxComponent->SetupAttachment(RootComponent);
-	BoxComponent->InitBoxExtent(FVector(600, 600, 250));
+	BoxComponent->InitBoxExtent(FVector(200, 100, 50));
 	BoxComponent->SetCollisionProfileName(TEXT("OverlapAll"));
 	BoxComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	BoxComponent->OnComponentBeginOverlap.AddDynamic(this, &ADestroyBall::OnBeginOverlap);

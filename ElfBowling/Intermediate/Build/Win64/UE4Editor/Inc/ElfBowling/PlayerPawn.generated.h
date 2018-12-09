@@ -58,7 +58,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerPawn); \
 
 
 #define ElfBowling_Source_ElfBowling_PlayerPawn_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Marker() { return STRUCT_OFFSET(APlayerPawn, Marker); }
+	FORCEINLINE static uint32 __PPO__Marker() { return STRUCT_OFFSET(APlayerPawn, Marker); } \
+	FORCEINLINE static uint32 __PPO__BowlingBallClass() { return STRUCT_OFFSET(APlayerPawn, BowlingBallClass); }
 
 
 #define ElfBowling_Source_ElfBowling_PlayerPawn_h_9_PROLOG

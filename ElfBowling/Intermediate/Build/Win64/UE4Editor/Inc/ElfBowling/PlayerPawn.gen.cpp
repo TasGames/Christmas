@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 	ELFBOWLING_API UClass* Z_Construct_UClass_APlayerPawn();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	UPackage* Z_Construct_UPackage__Script_ElfBowling();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	ELFBOWLING_API UClass* Z_Construct_UClass_ABowlingBall_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void APlayerPawn::StaticRegisterNativesAPlayerPawn()
@@ -32,6 +34,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BowlingBallClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_BowlingBallClass;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Marker_MetaData[];
 #endif
@@ -52,6 +58,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerPawn_Statics::NewProp_BowlingBallClass_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "ModuleRelativePath", "PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_APlayerPawn_Statics::NewProp_BowlingBallClass = { UE4CodeGen_Private::EPropertyClass::Class, "BowlingBallClass", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0024080000010001, 1, nullptr, STRUCT_OFFSET(APlayerPawn, BowlingBallClass), Z_Construct_UClass_ABowlingBall_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_APlayerPawn_Statics::NewProp_BowlingBallClass_MetaData, ARRAY_COUNT(Z_Construct_UClass_APlayerPawn_Statics::NewProp_BowlingBallClass_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerPawn_Statics::NewProp_Marker_MetaData[] = {
 		{ "Category", "Mesh" },
 		{ "EditInline", "true" },
@@ -60,6 +73,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerPawn_Statics::NewProp_Marker = { UE4CodeGen_Private::EPropertyClass::Object, "Marker", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(APlayerPawn, Marker), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APlayerPawn_Statics::NewProp_Marker_MetaData, ARRAY_COUNT(Z_Construct_UClass_APlayerPawn_Statics::NewProp_Marker_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlayerPawn_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_BowlingBallClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_Marker,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APlayerPawn_Statics::StaticCppClassTypeInfo = {
@@ -85,7 +99,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerPawn, 1221025765);
+	IMPLEMENT_CLASS(APlayerPawn, 3735440202);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APlayerPawn(Z_Construct_UClass_APlayerPawn, &APlayerPawn::StaticClass, TEXT("/Script/ElfBowling"), TEXT("APlayerPawn"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APlayerPawn);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

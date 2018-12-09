@@ -18,6 +18,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+	TSubclassOf<class ABowlingBall> BowlingBallClass;
+
 	void Move(float Val);
 	void Rotate(float Val);
 	void Launch();

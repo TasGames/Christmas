@@ -1,6 +1,7 @@
 // Thomas Arthur Simon
 
 #include "PlayerPawn.h"
+#include "BowlingBall.h"
 
 // Sets default values
 APlayerPawn::APlayerPawn()
@@ -9,7 +10,6 @@ APlayerPawn::APlayerPawn()
 	PrimaryActorTick.bCanEverTick = true;
 
 	Marker = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Marker"));
-	Marker->SetupAttachment(RootComponent);
 	Marker->bCastDynamicShadow = false;
 	Marker->CastShadow = false;
 
@@ -44,7 +44,12 @@ void APlayerPawn::Rotate(float Val)
 
 void APlayerPawn::Launch()
 {
-
+	if (CanLaunch == true)
+	{
+		UWorld* const World = GetWorld();
+		if (World != NULL)
+			World->SpawnActor<ABowlingBall>(BowlingBallClass, GetActorLocation(), GetActorRotation());
+	}
 }
 
 void APlayerPawn::PowerChange()

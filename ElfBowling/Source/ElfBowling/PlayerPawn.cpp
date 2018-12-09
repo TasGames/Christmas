@@ -24,7 +24,7 @@ APlayerPawn::APlayerPawn()
 
 	float Power = 0.0f;
 	bool CanSetPower = true;
-	bool CanLaunch = false;
+	bool CanLaunch = true;
 }
 
 // Called when the game starts or when spawned
@@ -59,9 +59,16 @@ void APlayerPawn::Launch()
 {
 	if (CanLaunch == true)
 	{
+		Marker->SetVisibility(false);
+
+		FVector SpawnLoc = GetActorLocation();
+		SpawnLoc.Z -= 60;
+
 		UWorld* const World = GetWorld();
 		if (World != NULL)
-			World->SpawnActor<ABowlingBall>(BowlingBallClass, GetActorLocation(), GetActorRotation());
+			World->SpawnActor<ABowlingBall>(BowlingBallClass, SpawnLoc, GetActorRotation());
+
+		CanLaunch = false;
 	}
 }
 

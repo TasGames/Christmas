@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "BowlingBall.generated.h"
 
+class UProjectileMovementComponent;
+
 UCLASS()
 class ELFBOWLING_API ABowlingBall : public AActor
 {
@@ -13,6 +15,9 @@ class ELFBOWLING_API ABowlingBall : public AActor
 
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 	class UStaticMeshComponent* Ball;
+
+	UPROPERTY(VisibleDefaultsOnly, Category = Movement)
+	UProjectileMovementComponent* ProjectileMovement;
 
 protected:
 	// Called when the game starts or when spawned

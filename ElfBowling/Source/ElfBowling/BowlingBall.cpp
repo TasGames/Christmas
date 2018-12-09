@@ -2,6 +2,7 @@
 
 #include "BowlingBall.h"
 #include "Components/StaticMeshComponent.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 
 // Sets default values
 ABowlingBall::ABowlingBall()
@@ -13,6 +14,13 @@ ABowlingBall::ABowlingBall()
 	Ball->SetupAttachment(RootComponent);
 	Ball->SetSimulatePhysics(true);
 
+	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
+	ProjectileMovement->UpdatedComponent = Ball;
+	ProjectileMovement->InitialSpeed = 3000.f;
+	ProjectileMovement->MaxSpeed = 3000.f;
+	ProjectileMovement->bRotationFollowsVelocity = true;
+	ProjectileMovement->bShouldBounce = false;
+	ProjectileMovement->ProjectileGravityScale = 1.0f; 
 }
 
 // Called when the game starts or when spawned

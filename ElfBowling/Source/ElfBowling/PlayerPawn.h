@@ -44,6 +44,8 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	bool CanSetPower;
+
+	UPROPERTY(EditAnywhere)
 	bool CanLaunch;
 	
 };

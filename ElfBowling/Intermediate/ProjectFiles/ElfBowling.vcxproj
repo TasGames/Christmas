@@ -411,8 +411,12 @@
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\ElfBowling\DestroyBall.cpp" />
+    <ClCompile Include="..\..\Source\ElfBowling\Elf.cpp" />
+    <ClCompile Include="..\..\Source\ElfBowling\ElfController.cpp" />
     <ClCompile Include="..\..\Source\ElfBowling\PlayerPawn.cpp" />
     <ClInclude Include="..\..\Source\ElfBowling\DestroyBall.h" />
+    <ClInclude Include="..\..\Source\ElfBowling\Elf.h" />
+    <ClInclude Include="..\..\Source\ElfBowling\ElfController.h" />
     <ClInclude Include="..\..\Source\ElfBowling\PlayerPawn.h" />
     <None Include="..\..\ElfBowling.uproject" />
     <None Include="..\..\Source\ElfBowling.Target.cs" />

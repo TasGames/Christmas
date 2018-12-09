@@ -43,12 +43,16 @@ void APlayerPawn::Tick(float DeltaTime)
 
 void APlayerPawn::Move(float Val)
 {
-
+	FVector Pos = GetActorLocation();
+	Pos.X += Val;
+	SetActorLocation(Pos);
 }
 
 void APlayerPawn::Rotate(float Val)
 {
-
+	FRotator Rot = GetActorRotation();
+	Rot.Yaw += Val;
+	SetActorRotation(Rot);
 }
 
 void APlayerPawn::Launch()

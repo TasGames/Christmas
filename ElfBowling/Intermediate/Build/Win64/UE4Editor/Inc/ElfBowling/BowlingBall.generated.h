@@ -57,7 +57,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABowlingBall); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABowlingBall)
 
 
-#define ElfBowling_Source_ElfBowling_BowlingBall_h_12_PRIVATE_PROPERTY_OFFSET
+#define ElfBowling_Source_ElfBowling_BowlingBall_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__Ball() { return STRUCT_OFFSET(ABowlingBall, Ball); }
+
+
 #define ElfBowling_Source_ElfBowling_BowlingBall_h_9_PROLOG
 #define ElfBowling_Source_ElfBowling_BowlingBall_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

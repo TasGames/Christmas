@@ -10,16 +10,18 @@ UCLASS()
 class ELFBOWLING_API ABowlingBall : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	ABowlingBall();
+
+	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+	class UStaticMeshComponent* Ball;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	
+
+	ABowlingBall();
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 

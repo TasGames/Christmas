@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 	ELFBOWLING_API UClass* Z_Construct_UClass_ABowlingBall();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_ElfBowling();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void ABowlingBall::StaticRegisterNativesABowlingBall()
 	{
@@ -31,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Ball_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Ball;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -44,6 +50,17 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 		{ "ModuleRelativePath", "BowlingBall.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABowlingBall_Statics::NewProp_Ball_MetaData[] = {
+		{ "Category", "Mesh" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "BowlingBall.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABowlingBall_Statics::NewProp_Ball = { UE4CodeGen_Private::EPropertyClass::Object, "Ball", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(ABowlingBall, Ball), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABowlingBall_Statics::NewProp_Ball_MetaData, ARRAY_COUNT(Z_Construct_UClass_ABowlingBall_Statics::NewProp_Ball_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABowlingBall_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABowlingBall_Statics::NewProp_Ball,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABowlingBall_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABowlingBall>::IsAbstract,
 	};
@@ -52,7 +69,7 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 		DependentSingletons, ARRAY_COUNT(DependentSingletons),
 		0x009000A0u,
 		nullptr, 0,
-		nullptr, 0,
+		Z_Construct_UClass_ABowlingBall_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UClass_ABowlingBall_Statics::PropPointers),
 		nullptr,
 		&StaticCppClassTypeInfo,
 		nullptr, 0,
@@ -67,7 +84,7 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABowlingBall, 1171832604);
+	IMPLEMENT_CLASS(ABowlingBall, 3983546379);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ABowlingBall(Z_Construct_UClass_ABowlingBall, &ABowlingBall::StaticClass, TEXT("/Script/ElfBowling"), TEXT("ABowlingBall"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABowlingBall);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

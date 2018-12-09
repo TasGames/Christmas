@@ -2,6 +2,7 @@
 
 #include "PlayerPawn.h"
 #include "BowlingBall.h"
+#include "Components/ArrowComponent.h"
 
 // Sets default values
 APlayerPawn::APlayerPawn()
@@ -9,9 +10,17 @@ APlayerPawn::APlayerPawn()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	ArrowComponent = CreateEditorOnlyDefaultSubobject<UArrowComponent>(TEXT("Arrow"));
+	RootComponent = ArrowComponent;
+	ArrowComponent->ArrowColor = FColor(150, 200, 255);
+	ArrowComponent->bTreatAsASprite = true;
+
 	Marker = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Marker"));
+	Marker->SetupAttachment(ArrowComponent);
 	Marker->bCastDynamicShadow = false;
 	Marker->CastShadow = false;
+	Marker->SetRelativeLocation(FVector(900.0f, 0.0f, 0.0f));
+	Marker->SetRelativeLocation(FVector(0.0f, 90.0f, 0.0f));
 
 	float Power = 0.0f;
 	bool CanSetPower = true;

@@ -14,6 +14,9 @@ class ELFBOWLING_API APlayerPawn : public APawn
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 	class UStaticMeshComponent* Marker;
 
+	UPROPERTY(VisibleDefaultsOnly, Category = Arrow)
+	class UArrowComponent* ArrowComponent;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

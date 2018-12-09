@@ -3524,3 +3524,72 @@ Current: -589.143921,0.000253,1217.186035|0.000000,0.000000,0.000000|400.000000,
 [2018.12.09-09.47.05:339][512]LogSavePackage: Moving 'A:/Projects/Unreal Engine Projects/Christmas/ElfBowling/Saved/Main75FBBE62499EA2D87220F2841B19F753.tmp' to 'A:/Projects/Unreal Engine Projects/Christmas/ElfBowling/Content/MyContent/Maps/Main.umap'
 [2018.12.09-09.47.05:365][512]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Maps/Main_BuiltData" FILE="A:/Projects/Unreal Engine Projects/Christmas/ElfBowling/Content/MyContent/Maps/Main_BuiltData.uasset" SILENT=true
 [2018.12.09-09.47.05:410][512]LogSavePackage: Moving 'A:/Projects/Unreal Engine Projects/Christmas/ElfBowling/Saved/Main_BuiltData65BD68CC45D4762C13AF38B882E1A721.tmp' to 'A:/Projects/Unreal Engine Projects/Christmas/ElfBowling/Content/MyContent/Maps/Main_BuiltData.uasset'
+[2018.12.09-09.48.09:352][361]LogAssetEditorManager: Opening Asset editor for Class /Script/ElfBowling.PlayerPawn
+[2018.12.09-09.48.35:202][890]LogAssetEditorManager: Opening Asset editor for Class /Script/ElfBowling.BowlingBall
+[2018.12.09-10.03.50:514][953]LogEditorViewport: Clicking on Actor (LMB): CameraActor (ElfCam)
+[2018.12.09-10.03.54:089][345]Cmd: SELECT NONE
+[2018.12.09-10.03.56:850][668]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-10.03.57:394][731]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-10.03.58:116][815]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-10.03.58:484][857]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-10.03.58:586][867]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-10.03.58:669][874]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2018.12.09-11.25.43:525][201]LogTemp: Repeating last play command: Selected Viewport
+[2018.12.09-11.25.43:552][201]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2018.12.09-11.25.43:553][201]PIE: New page: PIE session: Main (9 Dec 2018 11:25:43)
+[2018.12.09-11.25.43:553][201]LogPlayLevel: Creating play world package: /Game/MyContent/Maps/UEDPIE_0_Main
+[2018.12.09-11.25.43:579][201]LogPlayLevel: PIE: StaticDuplicateObject took: (0.025200s)
+[2018.12.09-11.25.43:584][201]LogAIModule: Creating AISystem for world Main
+[2018.12.09-11.25.43:585][201]LogPlayLevel: PIE: World Init took: (0.005826s)
+[2018.12.09-11.25.43:585][201]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MyContent/Maps/Main.Main to /Game/MyContent/Maps/UEDPIE_0_Main.Main (0.031675s)
+[2018.12.09-11.25.43:639][201]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 44.1 kHz using 16 bits per sample (channel mask 0x3)
+[2018.12.09-11.25.43:653][201]LogInit: FAudioDevice initialized.
+[2018.12.09-11.25.43:685][201]LogLoad: Game class is 'GameModeBase'
+[2018.12.09-11.25.43:689][201]LogWorld: Bringing World /Game/MyContent/Maps/UEDPIE_0_Main.Main up for play (max tick rate 0) at 2018.12.09-11.25.43
+[2018.12.09-11.25.43:689][201]LogWorld: Bringing up level for play took: 0.002554
+[2018.12.09-11.25.43:704][201]PIE: Play in editor start time for /Game/MyContent/Maps/UEDPIE_0_Main 1.129
+[2018.12.09-11.26.04:689][712]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2018.12.09-11.26.04:723][712]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2018.12.09-11.26.04:745][712]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2018.12.09-11.26.04:792][715]LogPlayLevel: Display: Destroying online subsystem :Context_66
+[2018.12.09-12.15.43:173][113]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2018.12.09-12.16.08:421][969]Running C:/Program Files/Epic Games/UE_4.20/Engine/Binaries/DotNET/UnrealBuildTool.exe Win64 Development -TargetType=Editor -Project="A:/Projects/Unreal Engine Projects/Christmas/ElfBowling/ElfBowling.uproject" -invalidatemakefilesonly
+[2018.12.09-12.16.09:341][969]Invalidating makefiles only in this run.
+[2018.12.09-12.16.09:489][969]Candidate modules for hot reload:
+[2018.12.09-12.16.09:489][969]  ElfBowling
+[2018.12.09-12.16.09:489][969]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.20/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=ElfBowling,1369 Win64 Development -TargetType=Editor -Project="A:/Projects/Unreal Engine Projects/Christmas/ElfBowling/ElfBowling.uproject" -canskiplink "A:/Projects/Unreal Engine Projects/Christmas/ElfBowling/ElfBowling.uproject" ]
+[2018.12.09-12.17.36:279][969]CompilerResultsLog: New page: Compilation - 9 Dec 2018 12:17:36
+[2018.12.09-12.17.36:280][969]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build.
+[2018.12.09-12.17.36:280][969]CompilerResultsLog: Creating makefile for hot reloading ElfBowlingEditor (no existing makefile)
+[2018.12.09-12.17.36:280][969]CompilerResultsLog: Compiling game modules for hot reload
+[2018.12.09-12.17.36:280][969]CompilerResultsLog: Using Visual Studio 2017 14.15.26726 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726) and Windows 10.0.17134.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2018.12.09-12.17.36:280][969]CompilerResultsLog: Parsing headers for ElfBowlingEditor
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:   Running UnrealHeaderTool "A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\ElfBowling.uproject" "A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\ElfBowlingEditor\Development\ElfBowlingEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2018.12.09-12.17.36:280][969]CompilerResultsLog: Reflection code generated for ElfBowlingEditor in 9.4853262 seconds
+[2018.12.09-12.17.36:280][969]CompilerResultsLog: Building 9 actions with 4 processes...
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:   [1/9] DestroyBall.cpp
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:   [2/9] BowlingBall.cpp
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:   [3/9] PlayerPawn.cpp
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:   [4/9] BowlingBall.gen.cpp
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:   [5/9] DestroyBall.gen.cpp
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:   [6/9] PlayerPawn.gen.cpp
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:   [7/9] ElfBowling.init.gen.cpp
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:   [8/9] UE4Editor-ElfBowling-1369.lib
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:      Creating library A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\UE4Editor-ElfBowling-1369.lib and object A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\UE4Editor-ElfBowling-1369.exp
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:   [9/9] UE4Editor-ElfBowling-1369.dll
+[2018.12.09-12.17.36:280][969]CompilerResultsLog:      Creating library A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\UE4Editor-ElfBowling-1369.suppressed.lib and object A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\UE4Editor-ElfBowling-1369.suppressed.exp
+[2018.12.09-12.17.36:280][969]CompilerResultsLog: Total build time: 86.20 seconds (Parallel executor: 68.45 seconds)
+[2018.12.09-12.17.36:280][969]LogMainFrame: MainFrame: Module compiling took 86.812 seconds
+[2018.12.09-12.17.36:334][969]LogClass: Could not find existing class DestroyBall in package /Script/ElfBowling for HotReload, assuming new class
+[2018.12.09-12.17.36:339][969]LogContentBrowser: Native class hierarchy updated for 'ElfBowling' in 0.0005 seconds. Added 4 classes and 2 folders.
+[2018.12.09-12.17.36:341][969]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2018.12.09-12.17.36:452][969]LogContentBrowser: Native class hierarchy populated in 0.0130 seconds. Added 2577 classes and 607 folders.
+[2018.12.09-12.17.36:455][969]Display: HotReload took 87.0s.
+[2018.12.09-12.17.36:456][969]Warning: HotReload operation took 87.0s.
+[2018.12.09-12.17.36:792][969]LogSlate: Window 'Add C++ Class' being destroyed
+[2018.12.09-12.17.36:804][969]LogHotReload: New module detected: UE4Editor-ElfBowling-1369.dll
+[2018.12.09-12.17.36:862][970]LogHotReload: Starting Hot-Reload from IDE
+[2018.12.09-12.17.36:920][970]LogContentBrowser: Native class hierarchy updated for 'ElfBowling' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2018.12.09-12.17.36:923][970]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2018.12.09-12.17.36:954][970]LogContentBrowser: Native class hierarchy populated in 0.0087 seconds. Added 2577 classes and 607 folders.
+[2018.12.09-12.17.36:968][970]Display: HotReload took  0.1s.

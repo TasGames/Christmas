@@ -410,7 +410,9 @@
     <NMakeOutput>..\..\Binaries\HTML5\ElfBowling-HTML5-Shipping.js</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\ElfBowling\DestroyBall.cpp" />
     <ClCompile Include="..\..\Source\ElfBowling\PlayerPawn.cpp" />
+    <ClInclude Include="..\..\Source\ElfBowling\DestroyBall.h" />
     <ClInclude Include="..\..\Source\ElfBowling\PlayerPawn.h" />
     <None Include="..\..\ElfBowling.uproject" />
     <None Include="..\..\Source\ElfBowling.Target.cs" />

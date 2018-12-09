@@ -52,9 +52,15 @@
     <ClInclude Include="..\..\Source\ElfBowling\PlayerPawn.h">
       <Filter>Source\ElfBowling</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ElfBowling\DestroyBall.h">
+      <Filter>Source\ElfBowling</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\ElfBowling\PlayerPawn.cpp">
+      <Filter>Source\ElfBowling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ElfBowling\DestroyBall.cpp">
       <Filter>Source\ElfBowling</Filter>
     </ClCompile>
   </ItemGroup>

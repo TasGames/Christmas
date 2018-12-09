@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ELFBOWLING_ElfBowlingGameModeBase_generated_h
 
-#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_RPC_WRAPPERS
-#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_INCLASS_NO_PURE_DECLS \
+#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_RPC_WRAPPERS
+#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAElfBowlingGameModeBase(); \
 	friend struct Z_Construct_UClass_AElfBowlingGameModeBase_Statics; \
@@ -24,7 +24,7 @@ public: \
 	DECLARE_SERIALIZER(AElfBowlingGameModeBase)
 
 
-#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_INCLASS \
+#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_INCLASS \
 private: \
 	static void StaticRegisterNativesAElfBowlingGameModeBase(); \
 	friend struct Z_Construct_UClass_AElfBowlingGameModeBase_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(AElfBowlingGameModeBase)
 
 
-#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_STANDARD_CONSTRUCTORS \
+#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AElfBowlingGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AElfBowlingGameModeBase) \
@@ -46,7 +46,7 @@ private: \
 public:
 
 
-#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
+#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AElfBowlingGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -59,26 +59,30 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AElfBowlingGameModeBase); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AElfBowlingGameModeBase)
 
 
-#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET
-#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_PROLOG
-#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_GENERATED_BODY_LEGACY \
+#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__PlayerHUDClass() { return STRUCT_OFFSET(AElfBowlingGameModeBase, PlayerHUDClass); } \
+	FORCEINLINE static uint32 __PPO__CurrentWidget() { return STRUCT_OFFSET(AElfBowlingGameModeBase, CurrentWidget); }
+
+
+#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_9_PROLOG
+#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_RPC_WRAPPERS \
-	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_INCLASS \
-	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_STANDARD_CONSTRUCTORS \
+	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_PRIVATE_PROPERTY_OFFSET \
+	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_RPC_WRAPPERS \
+	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_INCLASS \
+	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_GENERATED_BODY \
+#define ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_INCLASS_NO_PURE_DECLS \
-	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
+	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_PRIVATE_PROPERTY_OFFSET \
+	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_INCLASS_NO_PURE_DECLS \
+	ElfBowling_Source_ElfBowling_ElfBowlingGameModeBase_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

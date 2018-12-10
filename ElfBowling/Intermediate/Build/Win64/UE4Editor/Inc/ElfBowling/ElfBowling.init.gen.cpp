@@ -19,7 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeElfBowling_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/ElfBowling",
 				PKG_CompiledIn | 0x00000000,
-				0x17AC075D,
+				0x79B1CACC,
 				0x621A2578,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)

@@ -19,11 +19,10 @@ protected:
 	TSubclassOf<class AElf> ElfClass;
 
 	TArray<AElf*> ArrayOfElves;
+	TArray<FVector> ArrayOfPositions;
 
 	FVector SpawnLoc;
 	FRotator Rot;
-
-	void Spawn();
 
 public:	
 	AElfController();
@@ -35,6 +34,10 @@ public:
 	int ESecondScore;
 	int ETotalScore;
 
+	bool FirstRound;
+
+	void Spawn();
 	void RemoveElves();
+	void RespawnElves();
 	
 };

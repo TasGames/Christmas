@@ -14,6 +14,7 @@ AElfController::AElfController()
 	EFirstScore = 0;
 	ESecondScore = 0;
 	ETotalScore = 0;
+	FirstRound = true;
 }
 
 // Called when the game starts or when spawned
@@ -35,6 +36,9 @@ void AElfController::Spawn()
 {
 	FActorSpawnParameters SpawnParams;
 	int ElfNum = 4;
+
+	Rot = FRotator::ZeroRotator;
+	SpawnLoc = FVector(-90.0f, -970.0f, 55.0);
 
 	for (int j = 0; j < 4; j++)
 	{
@@ -81,5 +85,33 @@ void AElfController::RemoveElves()
 			Elf->Destroy();
 			ETotalScore += 1;
 		}
+		else
+		{
+			ArrayOfPositions.Add(Elf->GetElfPos());
+			Elf->Destroy();
+		}
 	}
+
+	ArrayOfElves.Empty();
+
+	if (FirstRound == false)
+	{
+		ArrayOfPositions.Empty();
+	}
+}
+
+void AElfController::RespawnElves()
+{
+	FActorSpawnParameters SpawnParams;
+
+	int NumOfPos = ArrayOfPositions.Num();
+	for (int i = 0; i < NumOfPos; i++)
+	{
+		FVector Loc = ArrayOfPositions[i];
+
+		AElf* Elf = GetWorld()->SpawnActor<AElf>(ElfClass, Loc, Rot, SpawnParams);
+		ArrayOfElves.Add(Elf);
+	}
+
+	ArrayOfPositions.Empty();
 }

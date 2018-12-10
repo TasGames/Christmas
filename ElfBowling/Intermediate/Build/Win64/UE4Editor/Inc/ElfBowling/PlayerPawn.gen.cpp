@@ -101,6 +101,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_FirstScore;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RoundCount_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_RoundCount;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CanLaunch_MetaData[];
 #endif
 		static void NewProp_CanLaunch_SetBit(void* Obj);
@@ -158,6 +162,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_APlayerPawn_Statics::NewProp_FirstScore = { UE4CodeGen_Private::EPropertyClass::Int, "FirstScore", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000004, 1, nullptr, STRUCT_OFFSET(APlayerPawn, FirstScore), METADATA_PARAMS(Z_Construct_UClass_APlayerPawn_Statics::NewProp_FirstScore_MetaData, ARRAY_COUNT(Z_Construct_UClass_APlayerPawn_Statics::NewProp_FirstScore_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerPawn_Statics::NewProp_RoundCount_MetaData[] = {
+		{ "Category", "PlayerPawn" },
+		{ "ModuleRelativePath", "PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_APlayerPawn_Statics::NewProp_RoundCount = { UE4CodeGen_Private::EPropertyClass::Int, "RoundCount", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000004, 1, nullptr, STRUCT_OFFSET(APlayerPawn, RoundCount), METADATA_PARAMS(Z_Construct_UClass_APlayerPawn_Statics::NewProp_RoundCount_MetaData, ARRAY_COUNT(Z_Construct_UClass_APlayerPawn_Statics::NewProp_RoundCount_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerPawn_Statics::NewProp_CanLaunch_MetaData[] = {
 		{ "Category", "PlayerPawn" },
 		{ "ModuleRelativePath", "PlayerPawn.h" },
@@ -202,6 +213,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_TotalScore,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_SecondScore,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_FirstScore,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_RoundCount,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_CanLaunch,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_E,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_BowlingBallClass,
@@ -231,7 +243,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerPawn, 836398450);
+	IMPLEMENT_CLASS(APlayerPawn, 4232966905);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APlayerPawn(Z_Construct_UClass_APlayerPawn, &APlayerPawn::StaticClass, TEXT("/Script/ElfBowling"), TEXT("APlayerPawn"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APlayerPawn);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

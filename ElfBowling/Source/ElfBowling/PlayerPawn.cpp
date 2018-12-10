@@ -25,6 +25,7 @@ APlayerPawn::APlayerPawn()
 	Marker->SetRelativeLocation(FVector(900.0f, 0.0f, 0.0f));
 	Marker->SetRelativeLocation(FVector(0.0f, 90.0f, 0.0f));
 
+	RoundCount = 1;
 	TotVal = -90.0f;
 	Power = 100.0f;
 	CanSetPower = true;
@@ -120,12 +121,25 @@ void APlayerPawn::Launch()
 void APlayerPawn::DestroyBall()
 {
 	Ball->Destroy();
+
 	E->RemoveElves();
+
+	if (E->FirstRound == true)
+	{
+		E->RespawnElves();
+		E->FirstRound = false;
+	}
+	else
+	{
+		E->Spawn();
+		E->FirstRound = true;
+		RoundCount += 1;
+	}
+
 	TotVal = -90.0f;
 	SetActorLocation(OriginPos);
 	SetActorRotation(OriginRot);
 	Marker->SetVisibility(true);
-	LaunchCount += 1;
 	CanLaunch = true;
 }
 

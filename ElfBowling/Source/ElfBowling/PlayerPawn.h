@@ -47,8 +47,6 @@ protected:
 	float Power;
 	float TotVal;
 
-	int LaunchCount;
-
 	bool Done;
 
 	struct FTimerHandle MemberTimerHandle;
@@ -69,6 +67,8 @@ public:
 	UPROPERTY(EditAnywhere)
 	bool CanLaunch;
 
+	UPROPERTY(BlueprintReadWrite)
+	int RoundCount;
 	UPROPERTY(BlueprintReadWrite)
 	int FirstScore;
 	UPROPERTY(BlueprintReadWrite)

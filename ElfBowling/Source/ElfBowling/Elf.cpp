@@ -18,6 +18,9 @@ AElf::AElf()
 void AElf::BeginPlay()
 {
 	Super::BeginPlay();
+
+	SetElfPos();
+	SetElfRot();
 	
 }
 
@@ -28,3 +31,22 @@ void AElf::Tick(float DeltaTime)
 
 }
 
+void AElf::SetElfPos()
+{
+	ElfPos = GetActorLocation();
+}
+
+FVector AElf::GetElfPos()
+{
+	return ElfPos;
+}
+
+void AElf::SetElfRot()
+{
+	ElfRot = GetActorRotation();
+}
+
+FRotator AElf::GetElfRot()
+{
+	return ElfRot;
+}

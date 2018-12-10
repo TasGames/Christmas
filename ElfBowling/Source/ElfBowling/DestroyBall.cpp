@@ -16,9 +16,9 @@ ADestroyBall::ADestroyBall()
 	BoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent"));
 	BoxComponent->SetupAttachment(RootComponent);
 	BoxComponent->InitBoxExtent(FVector(200, 100, 50));
-	BoxComponent->SetCollisionProfileName(TEXT("OverlapAll"));
+	/*BoxComponent->SetCollisionProfileName(TEXT("OverlapAll"));
 	BoxComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-	BoxComponent->OnComponentBeginOverlap.AddDynamic(this, &ADestroyBall::OnBeginOverlap);
+	BoxComponent->OnComponentBeginOverlap.AddDynamic(this, &ADestroyBall::OnBeginOverlap);*/
 }
 
 // Called when the game starts or when spawned
@@ -44,19 +44,17 @@ void ADestroyBall::Tick(float DeltaTime)
 
 }
 
-void ADestroyBall::OnBeginOverlap(UPrimitiveComponent * OverlappedComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
+/*void ADestroyBall::OnBeginOverlap(UPrimitiveComponent * OverlappedComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
 {
 	if (OtherActor != this)
 	{
 		ABowlingBall *B = Cast<ABowlingBall>(OtherActor);
 		if (B != NULL)
 		{
-			B->Destroy();
-
-			if (E != NULL)
+			if (P != NULL)
 			{
-				
+				P->DestroyBall();
 			}
 		}
 	}
-}
+}*/

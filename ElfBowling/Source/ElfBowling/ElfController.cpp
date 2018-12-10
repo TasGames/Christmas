@@ -11,7 +11,9 @@ AElfController::AElfController()
 
 	Rot = FRotator::ZeroRotator;
 	SpawnLoc = FVector(-90.0f, -970.0f, 55.0);
-
+	EFirstScore = 0;
+	ESecondScore = 0;
+	ETotalScore = 0;
 }
 
 // Called when the game starts or when spawned
@@ -54,4 +56,30 @@ void AElfController::Spawn()
 			SpawnLoc.X = 0.0f;
 	}
 
+}
+
+void AElfController::RemoveElves()
+{
+	int NumOfElves = ArrayOfElves.Num();
+
+	for (int i = 0; i < NumOfElves; i++)
+	{
+		AElf* Elf = ArrayOfElves[i];
+
+		if (Elf->GetElfRot().Roll > Elf->GetActorRotation().Roll + 1 || Elf->GetElfRot().Roll < Elf->GetActorRotation().Roll - 1)
+		{
+			Elf->Destroy();
+			ETotalScore += 1;
+		}
+		else if (Elf->GetElfRot().Pitch > Elf->GetActorRotation().Pitch + 1 || Elf->GetElfRot().Pitch < Elf->GetActorRotation().Pitch - 1)
+		{
+			Elf->Destroy();
+			ETotalScore += 1;
+		}
+		else if (Elf->GetActorLocation().Z < 50.0f)
+		{
+			Elf->Destroy();
+			ETotalScore += 1;
+		}
+	}
 }

@@ -60,7 +60,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerPawn); \
 #define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Marker() { return STRUCT_OFFSET(APlayerPawn, Marker); } \
 	FORCEINLINE static uint32 __PPO__ArrowComponent() { return STRUCT_OFFSET(APlayerPawn, ArrowComponent); } \
-	FORCEINLINE static uint32 __PPO__BowlingBallClass() { return STRUCT_OFFSET(APlayerPawn, BowlingBallClass); }
+	FORCEINLINE static uint32 __PPO__BowlingBallClass() { return STRUCT_OFFSET(APlayerPawn, BowlingBallClass); } \
+	FORCEINLINE static uint32 __PPO__E() { return STRUCT_OFFSET(APlayerPawn, E); }
 
 
 #define ElfBowling_Source_ElfBowling_PlayerPawn_h_17_PROLOG
@@ -91,7 +92,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 #define FOREACH_ENUM_EPHASEENUM(op) \
-	op(EPhaseEnum::Power) \
-	op(EPhaseEnum::Launch) \
-	op(EPhaseEnum::Check) 
+	op(EPhaseEnum::PPower) \
+	op(EPhaseEnum::PLaunch) \
+	op(EPhaseEnum::PCheck) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

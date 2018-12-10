@@ -31,6 +31,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
+	int EFirstScore;
+	int ESecondScore;
+	int ETotalScore;
+
+	void RemoveElves();
 	
 };

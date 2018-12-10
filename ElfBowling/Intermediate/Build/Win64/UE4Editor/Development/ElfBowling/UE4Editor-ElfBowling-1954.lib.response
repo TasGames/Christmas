@@ -1,0 +1,25 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-ElfBowling-1954.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\ElfBowlingEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\BowlingBall.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\DestroyBall.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\Elf.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\ElfBowling.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\ElfBowlingGameModeBase.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\ElfController.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\PlayerPawn.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\BowlingBall.gen.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\DestroyBall.gen.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\Elf.gen.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\ElfBowling.init.gen.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\ElfBowlingGameModeBase.gen.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\ElfController.gen.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\PlayerPawn.gen.cpp.obj"
+"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\PCLaunch.rc.res"
+/OUT:"A:\Projects\Unreal Engine Projects\Christmas\ElfBowling\Intermediate\Build\Win64\UE4Editor\Development\ElfBowling\UE4Editor-ElfBowling-1954.lib"

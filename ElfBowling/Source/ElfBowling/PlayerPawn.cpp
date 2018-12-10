@@ -3,6 +3,9 @@
 #include "PlayerPawn.h"
 #include "BowlingBall.h"
 #include "Components/ArrowComponent.h"
+#include "ElfController.h"
+#include "EngineUtils.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 
 // Sets default values
 APlayerPawn::APlayerPawn()
@@ -22,24 +25,40 @@ APlayerPawn::APlayerPawn()
 	Marker->SetRelativeLocation(FVector(900.0f, 0.0f, 0.0f));
 	Marker->SetRelativeLocation(FVector(0.0f, 90.0f, 0.0f));
 
-
 	TotVal = -90.0f;
-	Power = 0.0f;
+	Power = 100.0f;
 	CanSetPower = true;
 	CanLaunch = true;
+	Done = false;
 }
 
 // Called when the game starts or when spawned
 void APlayerPawn::BeginPlay()
 {
 	Super::BeginPlay();
+
+	UWorld* World = GetWorld();
+
+	for (TActorIterator<AElfController> It(World, AElfController::StaticClass()); It; ++It)
+	{
+		AElfController* EC = *It;
+
+		if (EC != NULL)
+			E = EC;
+	}
 	
+	OriginPos = GetActorLocation();
+	OriginRot = GetActorRotation();
 }
 
 // Called every frame
 void APlayerPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	FirstScore = E->EFirstScore;
+	SecondScore = E->ESecondScore;
+	TotalScore = E->ETotalScore;
 
 }
 
@@ -88,14 +107,26 @@ void APlayerPawn::Launch()
 
 		UWorld* const World = GetWorld();
 		if (World != NULL)
-			World->SpawnActor<ABowlingBall>(BowlingBallClass, SpawnLoc, GetActorRotation());
+		{
+			Ball = World->SpawnActor<ABowlingBall>(BowlingBallClass, SpawnLoc, GetActorRotation());
+			GetWorldTimerManager().SetTimer(MemberTimerHandle, this, &APlayerPawn::DestroyBall, 5.0f, false);
+		}
 
 		CanLaunch = false;
+		Done = false;
 	}
 }
 
-void APlayerPawn::PowerChange()
+void APlayerPawn::DestroyBall()
 {
+	Ball->Destroy();
+	E->RemoveElves();
+	TotVal = -90.0f;
+	SetActorLocation(OriginPos);
+	SetActorRotation(OriginRot);
+	Marker->SetVisibility(true);
+	LaunchCount += 1;
+	CanLaunch = true;
 }
 
 // Called to bind functionality to input

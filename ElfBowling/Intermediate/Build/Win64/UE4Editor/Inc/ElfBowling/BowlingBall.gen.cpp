@@ -62,7 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 		{ "ModuleRelativePath", "BowlingBall.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABowlingBall_Statics::NewProp_ProjectileMovement = { UE4CodeGen_Private::EPropertyClass::Object, "ProjectileMovement", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(ABowlingBall, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABowlingBall_Statics::NewProp_ProjectileMovement_MetaData, ARRAY_COUNT(Z_Construct_UClass_ABowlingBall_Statics::NewProp_ProjectileMovement_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABowlingBall_Statics::NewProp_ProjectileMovement = { UE4CodeGen_Private::EPropertyClass::Object, "ProjectileMovement", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x00100000000b0009, 1, nullptr, STRUCT_OFFSET(ABowlingBall, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABowlingBall_Statics::NewProp_ProjectileMovement_MetaData, ARRAY_COUNT(Z_Construct_UClass_ABowlingBall_Statics::NewProp_ProjectileMovement_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABowlingBall_Statics::NewProp_Ball_MetaData[] = {
 		{ "Category", "Mesh" },
@@ -98,7 +98,7 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABowlingBall, 1934381838);
+	IMPLEMENT_CLASS(ABowlingBall, 713117675);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ABowlingBall(Z_Construct_UClass_ABowlingBall, &ABowlingBall::StaticClass, TEXT("/Script/ElfBowling"), TEXT("ABowlingBall"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABowlingBall);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

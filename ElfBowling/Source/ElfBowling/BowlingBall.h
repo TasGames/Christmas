@@ -16,9 +16,6 @@ class ELFBOWLING_API ABowlingBall : public AActor
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 	class UStaticMeshComponent* Ball;
 
-	UPROPERTY(VisibleDefaultsOnly, Category = Movement)
-	UProjectileMovementComponent* ProjectileMovement;
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -30,6 +27,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
+	UPROPERTY(VisibleDefaultsOnly, Category = Movement)
+	UProjectileMovementComponent* ProjectileMovement;
 	
 };

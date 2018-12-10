@@ -58,8 +58,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABowlingBall); \
 
 
 #define ElfBowling_Source_ElfBowling_BowlingBall_h_14_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Ball() { return STRUCT_OFFSET(ABowlingBall, Ball); } \
-	FORCEINLINE static uint32 __PPO__ProjectileMovement() { return STRUCT_OFFSET(ABowlingBall, ProjectileMovement); }
+	FORCEINLINE static uint32 __PPO__Ball() { return STRUCT_OFFSET(ABowlingBall, Ball); }
 
 
 #define ElfBowling_Source_ElfBowling_BowlingBall_h_11_PROLOG

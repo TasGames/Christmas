@@ -3,6 +3,9 @@
 #include "PlayerPawn.h"
 #include "BowlingBall.h"
 #include "Components/ArrowComponent.h"
+#include "ElfController.h"
+#include "EngineUtils.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 
 // Sets default values
 APlayerPawn::APlayerPawn()
@@ -22,16 +25,31 @@ APlayerPawn::APlayerPawn()
 	Marker->SetRelativeLocation(FVector(900.0f, 0.0f, 0.0f));
 	Marker->SetRelativeLocation(FVector(0.0f, 90.0f, 0.0f));
 
-	float Power = 0.0f;
-	bool CanSetPower = true;
-	bool CanLaunch = true;
+	RoundCount = 1;
+	TotVal = -90.0f;
+	Power = 100.0f;
+	CanSetPower = true;
+	CanLaunch = true;
+	Done = false;
 }
 
 // Called when the game starts or when spawned
 void APlayerPawn::BeginPlay()
 {
 	Super::BeginPlay();
+
+	UWorld* World = GetWorld();
+
+	for (TActorIterator<AElfController> It(World, AElfController::StaticClass()); It; ++It)
+	{
+		AElfController* EC = *It;
+
+		if (EC != NULL)
+			E = EC;
+	}
 	
+	OriginPos = GetActorLocation();
+	OriginRot = GetActorRotation();
 }
 
 // Called every frame
@@ -39,19 +57,43 @@ void APlayerPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	FirstScore = E->EFirstScore;
+	SecondScore = E->ESecondScore;
+	TotalScore = E->ETotalScore;
+
 }
 
 void APlayerPawn::Move(float Val)
 {
 	FVector Pos = GetActorLocation();
 	Pos.X += Val;
+
+	if (Pos.X > 120.0f)
+		Pos.X = 120.0f;
+	else if (Pos.X < -120.0f)
+		Pos.X = -120.0f;
+
 	SetActorLocation(Pos);
 }
 
 void APlayerPawn::Rotate(float Val)
 {
 	FRotator Rot = GetActorRotation();
+
 	Rot.Yaw += Val;
+	TotVal += Val;
+
+	if (TotVal > -80.0f)
+	{
+		Rot.Yaw = -80.0f;
+		TotVal = -80.0f;
+	}
+	else if (TotVal < -100.0f)
+	{
+		Rot.Yaw = -100.0f;
+		TotVal = -100.0f;
+	}
+
 	SetActorRotation(Rot);
 }
 
@@ -66,14 +108,42 @@ void APlayerPawn::Launch()
 
 		UWorld* const World = GetWorld();
 		if (World != NULL)
-			World->SpawnActor<ABowlingBall>(BowlingBallClass, SpawnLoc, GetActorRotation());
+		{
+			Ball = World->SpawnActor<ABowlingBall>(BowlingBallClass, SpawnLoc, GetActorRotation());
+			GetWorldTimerManager().SetTimer(MemberTimerHandle, this, &APlayerPawn::DestroyBall, 5.0f, false);
+		}
 
 		CanLaunch = false;
+		Done = false;
 	}
 }
 
-void APlayerPawn::PowerChange()
+void APlayerPawn::DestroyBall()
 {
+	Ball->Destroy();
+
+	E->RemoveElves();
+
+	if (E->HowMany == 0)
+		E->FirstRound = false;
+
+	if (E->FirstRound == true)
+	{
+		E->RespawnElves();
+		E->FirstRound = false;
+	}
+	else
+	{
+		E->Spawn();
+		E->FirstRound = true;
+		RoundCount += 1;
+	}
+
+	TotVal = -90.0f;
+	SetActorLocation(OriginPos);
+	SetActorRotation(OriginRot);
+	Marker->SetVisibility(true);
+	CanLaunch = true;
 }
 
 // Called to bind functionality to input

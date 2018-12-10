@@ -6,6 +6,14 @@
 #include "GameFramework/Pawn.h"
 #include "PlayerPawn.generated.h"
 
+UENUM(BlueprintType)
+enum class EPhaseEnum : uint8
+{
+	PPower 	UMETA(DisplayName = "Power"),
+	PLaunch 	UMETA(DisplayName = "Launch"),
+	PCheck	UMETA(DisplayName = "Check"),
+};
+
 UCLASS()
 class ELFBOWLING_API APlayerPawn : public APawn
 {
@@ -24,13 +32,22 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<class ABowlingBall> BowlingBallClass;
 
+	UPROPERTY(EditAnywhere, Category = ElfController)
+	class AElfController* E;
+
+	ABowlingBall* Ball;
+
 	void Move(float Val);
 	void Rotate(float Val);
 	void Launch();
 
-	void PowerChange();
+	FVector OriginPos;
+	FRotator OriginRot;
 
 	float Power;
+	float TotVal;
+
+	bool Done;
 
 	struct FTimerHandle MemberTimerHandle;
 
@@ -40,6 +57,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void DestroyBall();
+
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
@@ -47,5 +66,14 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	bool CanLaunch;
+
+	UPROPERTY(BlueprintReadWrite)
+	int RoundCount;
+	UPROPERTY(BlueprintReadWrite)
+	int FirstScore;
+	UPROPERTY(BlueprintReadWrite)
+	int SecondScore;
+	UPROPERTY(BlueprintReadWrite)
+	int TotalScore;
 	
 };

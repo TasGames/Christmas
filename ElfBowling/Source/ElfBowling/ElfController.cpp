@@ -39,6 +39,7 @@ void AElfController::Spawn()
 		for (int i = 0; i < ElfNum; i++)
 		{
 			AElf* Elf = GetWorld()->SpawnActor<AElf>(ElfClass, SpawnLoc, Rot, SpawnParams);
+			ArrayOfElves.Add(Elf);
 			SpawnLoc.X += 60.0f;
 		}
 

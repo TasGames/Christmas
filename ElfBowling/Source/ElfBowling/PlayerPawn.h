@@ -31,6 +31,7 @@ protected:
 	void PowerChange();
 
 	float Power;
+	float TotVal;
 
 	struct FTimerHandle MemberTimerHandle;
 

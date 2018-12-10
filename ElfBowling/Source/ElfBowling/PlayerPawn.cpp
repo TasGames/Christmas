@@ -22,9 +22,11 @@ APlayerPawn::APlayerPawn()
 	Marker->SetRelativeLocation(FVector(900.0f, 0.0f, 0.0f));
 	Marker->SetRelativeLocation(FVector(0.0f, 90.0f, 0.0f));
 
-	float Power = 0.0f;
-	bool CanSetPower = true;
-	bool CanLaunch = true;
+
+	TotVal = -90.0f;
+	Power = 0.0f;
+	CanSetPower = true;
+	CanLaunch = true;
 }
 
 // Called when the game starts or when spawned
@@ -45,13 +47,33 @@ void APlayerPawn::Move(float Val)
 {
 	FVector Pos = GetActorLocation();
 	Pos.X += Val;
+
+	if (Pos.X > 120.0f)
+		Pos.X = 120.0f;
+	else if (Pos.X < -120.0f)
+		Pos.X = -120.0f;
+
 	SetActorLocation(Pos);
 }
 
 void APlayerPawn::Rotate(float Val)
 {
 	FRotator Rot = GetActorRotation();
+
 	Rot.Yaw += Val;
+	TotVal += Val;
+
+	if (TotVal > -80.0f)
+	{
+		Rot.Yaw = -80.0f;
+		TotVal = -80.0f;
+	}
+	else if (TotVal < -100.0f)
+	{
+		Rot.Yaw = -100.0f;
+		TotVal = -100.0f;
+	}
+
 	SetActorRotation(Rot);
 }
 

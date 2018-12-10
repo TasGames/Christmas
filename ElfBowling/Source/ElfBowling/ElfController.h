@@ -18,6 +18,8 @@ protected:
 	UPROPERTY(EditAnywhere, Category = Elf)
 	TSubclassOf<class AElf> ElfClass;
 
+	TArray<AElf*> ArrayOfElves;
+
 	FVector SpawnLoc;
 	FRotator Rot;
 

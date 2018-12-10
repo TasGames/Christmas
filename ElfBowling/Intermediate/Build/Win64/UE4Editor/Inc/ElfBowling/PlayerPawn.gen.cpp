@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 	ELFBOWLING_API UClass* Z_Construct_UClass_APlayerPawn_NoRegister();
 	ELFBOWLING_API UClass* Z_Construct_UClass_APlayerPawn();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
+	ELFBOWLING_API UFunction* Z_Construct_UFunction_APlayerPawn_Win();
 	ELFBOWLING_API UClass* Z_Construct_UClass_AElfController_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
@@ -76,8 +77,41 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 		}
 		return ReturnEnum;
 	}
+	static FName NAME_APlayerPawn_Win = FName(TEXT("Win"));
+	void APlayerPawn::Win()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_APlayerPawn_Win),NULL);
+	}
 	void APlayerPawn::StaticRegisterNativesAPlayerPawn()
 	{
+		UClass* Class = APlayerPawn::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "Win", &APlayerPawn::execWin },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_APlayerPawn_Win_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerPawn_Win_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Win" },
+		{ "ModuleRelativePath", "PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerPawn_Win_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerPawn, "Win", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020C00, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_APlayerPawn_Win_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_APlayerPawn_Win_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_APlayerPawn_Win()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_APlayerPawn_Win_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_APlayerPawn_NoRegister()
 	{
@@ -86,6 +120,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 	struct Z_Construct_UClass_APlayerPawn_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -137,6 +172,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 	UObject* (*const Z_Construct_UClass_APlayerPawn_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_APawn,
 		(UObject* (*)())Z_Construct_UPackage__Script_ElfBowling,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_APlayerPawn_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_APlayerPawn_Win, "Win" }, // 3691793347
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerPawn_Statics::Class_MetaDataParams[] = {
@@ -240,7 +278,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 		&APlayerPawn::StaticClass,
 		DependentSingletons, ARRAY_COUNT(DependentSingletons),
 		0x009000A0u,
-		nullptr, 0,
+		FuncInfo, ARRAY_COUNT(FuncInfo),
 		Z_Construct_UClass_APlayerPawn_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UClass_APlayerPawn_Statics::PropPointers),
 		nullptr,
 		&StaticCppClassTypeInfo,
@@ -256,7 +294,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerPawn, 550553785);
+	IMPLEMENT_CLASS(APlayerPawn, 1256095984);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APlayerPawn(Z_Construct_UClass_APlayerPawn, &APlayerPawn::StaticClass, TEXT("/Script/ElfBowling"), TEXT("APlayerPawn"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APlayerPawn);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

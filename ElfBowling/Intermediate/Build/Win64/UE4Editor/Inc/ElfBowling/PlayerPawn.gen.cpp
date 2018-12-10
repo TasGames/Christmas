@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 	ELFBOWLING_API UClass* Z_Construct_UClass_APlayerPawn();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	ELFBOWLING_API UClass* Z_Construct_UClass_AElfController_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ELFBOWLING_API UClass* Z_Construct_UClass_ABowlingBall_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UArrowComponent_NoRegister();
@@ -114,6 +115,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_E;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Music_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Music;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BowlingBallClass_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_BowlingBallClass;
@@ -187,6 +192,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerPawn_Statics::NewProp_E = { UE4CodeGen_Private::EPropertyClass::Object, "E", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000000001, 1, nullptr, STRUCT_OFFSET(APlayerPawn, E), Z_Construct_UClass_AElfController_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APlayerPawn_Statics::NewProp_E_MetaData, ARRAY_COUNT(Z_Construct_UClass_APlayerPawn_Statics::NewProp_E_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerPawn_Statics::NewProp_Music_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "ModuleRelativePath", "PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerPawn_Statics::NewProp_Music = { UE4CodeGen_Private::EPropertyClass::Object, "Music", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000000005, 1, nullptr, STRUCT_OFFSET(APlayerPawn, Music), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APlayerPawn_Statics::NewProp_Music_MetaData, ARRAY_COUNT(Z_Construct_UClass_APlayerPawn_Statics::NewProp_Music_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerPawn_Statics::NewProp_BowlingBallClass_MetaData[] = {
 		{ "Category", "Projectile" },
 		{ "ModuleRelativePath", "PlayerPawn.h" },
@@ -216,6 +228,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_RoundCount,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_CanLaunch,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_E,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_Music,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_BowlingBallClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_ArrowComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerPawn_Statics::NewProp_Marker,
@@ -243,7 +256,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerPawn, 4232966905);
+	IMPLEMENT_CLASS(APlayerPawn, 550553785);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APlayerPawn(Z_Construct_UClass_APlayerPawn, &APlayerPawn::StaticClass, TEXT("/Script/ElfBowling"), TEXT("APlayerPawn"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APlayerPawn);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -2,6 +2,7 @@
 
 #include "DestroyBall.h"
 #include "BowlingBall.h"
+#include "Components/AudioComponent.h"
 #include "Components/BoxComponent.h"
 #include "ElfController.h"
 #include "EngineUtils.h"
@@ -44,17 +45,14 @@ void ADestroyBall::Tick(float DeltaTime)
 
 }
 
-/*void ADestroyBall::OnBeginOverlap(UPrimitiveComponent * OverlappedComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
+void ADestroyBall::OnBeginOverlap(UPrimitiveComponent * OverlappedComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
 {
 	if (OtherActor != this)
 	{
 		ABowlingBall *B = Cast<ABowlingBall>(OtherActor);
 		if (B != NULL)
 		{
-			if (P != NULL)
-			{
-				P->DestroyBall();
-			}
+			B->Roll->Stop();
 		}
 	}
-}*/
+}

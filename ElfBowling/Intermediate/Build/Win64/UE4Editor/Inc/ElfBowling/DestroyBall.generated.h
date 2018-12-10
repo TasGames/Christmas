@@ -8,13 +8,48 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef ELFBOWLING_DestroyBall_generated_h
 #error "DestroyBall.generated.h already included, missing '#pragma once' in DestroyBall.h"
 #endif
 #define ELFBOWLING_DestroyBall_generated_h
 
-#define ElfBowling_Source_ElfBowling_DestroyBall_h_12_RPC_WRAPPERS
-#define ElfBowling_Source_ElfBowling_DestroyBall_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define ElfBowling_Source_ElfBowling_DestroyBall_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnBeginOverlap) \
+	{ \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp); \
+		P_GET_OBJECT(AActor,Z_Param_OtherActor); \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_OtherBodyIndex); \
+		P_GET_UBOOL(Z_Param_bFromSweep); \
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepResult); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnBeginOverlap(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult); \
+		P_NATIVE_END; \
+	}
+
+
+#define ElfBowling_Source_ElfBowling_DestroyBall_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnBeginOverlap) \
+	{ \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp); \
+		P_GET_OBJECT(AActor,Z_Param_OtherActor); \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_OtherBodyIndex); \
+		P_GET_UBOOL(Z_Param_bFromSweep); \
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepResult); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnBeginOverlap(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult); \
+		P_NATIVE_END; \
+	}
+
+
 #define ElfBowling_Source_ElfBowling_DestroyBall_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesADestroyBall(); \

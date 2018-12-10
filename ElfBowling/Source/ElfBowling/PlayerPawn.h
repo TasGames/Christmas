@@ -32,6 +32,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<class ABowlingBall> BowlingBallClass;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+	class USoundBase* Music;
+
 	UPROPERTY(EditAnywhere, Category = ElfController)
 	class AElfController* E;
 

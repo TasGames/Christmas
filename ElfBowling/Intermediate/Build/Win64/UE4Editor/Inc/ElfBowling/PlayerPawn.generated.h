@@ -61,6 +61,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerPawn); \
 	FORCEINLINE static uint32 __PPO__Marker() { return STRUCT_OFFSET(APlayerPawn, Marker); } \
 	FORCEINLINE static uint32 __PPO__ArrowComponent() { return STRUCT_OFFSET(APlayerPawn, ArrowComponent); } \
 	FORCEINLINE static uint32 __PPO__BowlingBallClass() { return STRUCT_OFFSET(APlayerPawn, BowlingBallClass); } \
+	FORCEINLINE static uint32 __PPO__Music() { return STRUCT_OFFSET(APlayerPawn, Music); } \
 	FORCEINLINE static uint32 __PPO__E() { return STRUCT_OFFSET(APlayerPawn, E); }
 
 

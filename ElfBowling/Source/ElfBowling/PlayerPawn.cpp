@@ -6,6 +6,8 @@
 #include "ElfController.h"
 #include "EngineUtils.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "Sound/SoundBase.h"
 
 // Sets default values
 APlayerPawn::APlayerPawn()
@@ -22,7 +24,7 @@ APlayerPawn::APlayerPawn()
 	Marker->SetupAttachment(ArrowComponent);
 	Marker->bCastDynamicShadow = false;
 	Marker->CastShadow = false;
-	Marker->SetRelativeLocation(FVector(900.0f, 0.0f, 0.0f));
+	Marker->SetRelativeLocation(FVector(900.0f, 0.0f, -90.0f));
 	Marker->SetRelativeLocation(FVector(0.0f, 90.0f, 0.0f));
 
 	RoundCount = 1;
@@ -50,6 +52,11 @@ void APlayerPawn::BeginPlay()
 	
 	OriginPos = GetActorLocation();
 	OriginRot = GetActorRotation();
+
+	if (Music != NULL)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, Music, GetActorLocation());
+	}
 }
 
 // Called every frame

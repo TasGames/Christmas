@@ -27,6 +27,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Sound)
+	class UAudioComponent* Roll;
+
 	UPROPERTY(VisibleDefaultsOnly, Category = Movement)
 	UProjectileMovementComponent* ProjectileMovement;
 	

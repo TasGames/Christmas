@@ -146,11 +146,19 @@ void APlayerPawn::DestroyBall()
 		RoundCount += 1;
 	}
 
+	if (RoundCount == 6)
+		Win();
+
 	TotVal = -90.0f;
 	SetActorLocation(OriginPos);
 	SetActorRotation(OriginRot);
 	Marker->SetVisibility(true);
 	CanLaunch = true;
+}
+
+void APlayerPawn::Win_Implementation()
+{
+
 }
 
 // Called to bind functionality to input

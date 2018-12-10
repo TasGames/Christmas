@@ -13,8 +13,32 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ELFBOWLING_PlayerPawn_generated_h
 
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_RPC_WRAPPERS
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_RPC_WRAPPERS_NO_PURE_DECLS
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_RPC_WRAPPERS \
+	virtual void Win_Implementation(); \
+ \
+	DECLARE_FUNCTION(execWin) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Win_Implementation(); \
+		P_NATIVE_END; \
+	}
+
+
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void Win_Implementation(); \
+ \
+	DECLARE_FUNCTION(execWin) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Win_Implementation(); \
+		P_NATIVE_END; \
+	}
+
+
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_EVENT_PARMS
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_CALLBACK_WRAPPERS
 #define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerPawn(); \
@@ -65,12 +89,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerPawn); \
 	FORCEINLINE static uint32 __PPO__E() { return STRUCT_OFFSET(APlayerPawn, E); }
 
 
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_17_PROLOG
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_17_PROLOG \
+	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_EVENT_PARMS
+
+
 #define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_PRIVATE_PROPERTY_OFFSET \
 	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_RPC_WRAPPERS \
+	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_CALLBACK_WRAPPERS \
 	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_INCLASS \
 	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_STANDARD_CONSTRUCTORS \
 public: \
@@ -82,6 +110,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_PRIVATE_PROPERTY_OFFSET \
 	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_CALLBACK_WRAPPERS \
 	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_INCLASS_NO_PURE_DECLS \
 	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_ENHANCED_CONSTRUCTORS \
 private: \

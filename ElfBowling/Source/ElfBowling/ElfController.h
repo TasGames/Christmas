@@ -10,16 +10,22 @@ UCLASS()
 class ELFBOWLING_API AElfController : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	AElfController();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditAnywhere, Category = Elf)
+	TSubclassOf<class AElf> ElfClass;
+
+	FVector SpawnLoc;
+	FRotator Rot;
+
+	void Spawn();
+
 public:	
+	AElfController();
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 

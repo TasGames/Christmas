@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeElfController() {}
 	ELFBOWLING_API UClass* Z_Construct_UClass_AElfController();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_ElfBowling();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	ELFBOWLING_API UClass* Z_Construct_UClass_AElf_NoRegister();
 // End Cross Module References
 	void AElfController::StaticRegisterNativesAElfController()
 	{
@@ -31,6 +33,11 @@ void EmptyLinkFunctionForGeneratedCodeElfController() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ElfClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ElfClass;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -44,6 +51,16 @@ void EmptyLinkFunctionForGeneratedCodeElfController() {}
 		{ "ModuleRelativePath", "ElfController.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AElfController_Statics::NewProp_ElfClass_MetaData[] = {
+		{ "Category", "Elf" },
+		{ "ModuleRelativePath", "ElfController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AElfController_Statics::NewProp_ElfClass = { UE4CodeGen_Private::EPropertyClass::Class, "ElfClass", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0024080000000001, 1, nullptr, STRUCT_OFFSET(AElfController, ElfClass), Z_Construct_UClass_AElf_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AElfController_Statics::NewProp_ElfClass_MetaData, ARRAY_COUNT(Z_Construct_UClass_AElfController_Statics::NewProp_ElfClass_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AElfController_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AElfController_Statics::NewProp_ElfClass,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AElfController_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AElfController>::IsAbstract,
 	};
@@ -52,7 +69,7 @@ void EmptyLinkFunctionForGeneratedCodeElfController() {}
 		DependentSingletons, ARRAY_COUNT(DependentSingletons),
 		0x009000A0u,
 		nullptr, 0,
-		nullptr, 0,
+		Z_Construct_UClass_AElfController_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UClass_AElfController_Statics::PropPointers),
 		nullptr,
 		&StaticCppClassTypeInfo,
 		nullptr, 0,
@@ -67,7 +84,7 @@ void EmptyLinkFunctionForGeneratedCodeElfController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AElfController, 2969312750);
+	IMPLEMENT_CLASS(AElfController, 1620572424);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AElfController(Z_Construct_UClass_AElfController, &AElfController::StaticClass, TEXT("/Script/ElfBowling"), TEXT("AElfController"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AElfController);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

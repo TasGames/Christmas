@@ -57,7 +57,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AElf); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AElf)
 
 
-#define ElfBowling_Source_ElfBowling_Elf_h_12_PRIVATE_PROPERTY_OFFSET
+#define ElfBowling_Source_ElfBowling_Elf_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__ELfMesh() { return STRUCT_OFFSET(AElf, ELfMesh); }
+
+
 #define ElfBowling_Source_ElfBowling_Elf_h_9_PROLOG
 #define ElfBowling_Source_ElfBowling_Elf_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

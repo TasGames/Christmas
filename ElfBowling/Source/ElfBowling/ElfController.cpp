@@ -14,6 +14,7 @@ AElfController::AElfController()
 	EFirstScore = 0;
 	ESecondScore = 0;
 	ETotalScore = 0;
+	HowMany = 0;
 	FirstRound = true;
 }
 
@@ -65,6 +66,7 @@ void AElfController::Spawn()
 void AElfController::RemoveElves()
 {
 	int NumOfElves = ArrayOfElves.Num();
+	HowMany = 0;
 
 	for (int i = 0; i < NumOfElves; i++)
 	{
@@ -89,10 +91,12 @@ void AElfController::RemoveElves()
 		{
 			ArrayOfPositions.Add(Elf->GetElfPos());
 			Elf->Destroy();
+			HowMany += 1;
 		}
 	}
 
 	ArrayOfElves.Empty();
+
 
 	if (FirstRound == false)
 	{

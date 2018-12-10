@@ -34,6 +34,8 @@ public:
 	int ESecondScore;
 	int ETotalScore;
 
+	int HowMany;
+
 	bool FirstRound;
 
 	void Spawn();

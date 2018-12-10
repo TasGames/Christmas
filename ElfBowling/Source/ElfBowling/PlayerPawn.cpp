@@ -124,6 +124,9 @@ void APlayerPawn::DestroyBall()
 
 	E->RemoveElves();
 
+	if (E->HowMany == 0)
+		E->FirstRound = false;
+
 	if (E->FirstRound == true)
 	{
 		E->RespawnElves();

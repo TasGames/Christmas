@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ELFBOWLING_PlayerPawn_generated_h
 
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_12_RPC_WRAPPERS
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_12_INCLASS_NO_PURE_DECLS \
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_RPC_WRAPPERS
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_RPC_WRAPPERS_NO_PURE_DECLS
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerPawn(); \
 	friend struct Z_Construct_UClass_APlayerPawn_Statics; \
@@ -24,7 +24,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerPawn)
 
 
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_12_INCLASS \
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_INCLASS \
 private: \
 	static void StaticRegisterNativesAPlayerPawn(); \
 	friend struct Z_Construct_UClass_APlayerPawn_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerPawn)
 
 
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_12_STANDARD_CONSTRUCTORS \
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APlayerPawn(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APlayerPawn) \
@@ -46,7 +46,7 @@ private: \
 public:
 
 
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_12_ENHANCED_CONSTRUCTORS \
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APlayerPawn(APlayerPawn&&); \
@@ -57,31 +57,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerPawn); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APlayerPawn)
 
 
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_12_PRIVATE_PROPERTY_OFFSET \
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Marker() { return STRUCT_OFFSET(APlayerPawn, Marker); } \
 	FORCEINLINE static uint32 __PPO__ArrowComponent() { return STRUCT_OFFSET(APlayerPawn, ArrowComponent); } \
 	FORCEINLINE static uint32 __PPO__BowlingBallClass() { return STRUCT_OFFSET(APlayerPawn, BowlingBallClass); }
 
 
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_9_PROLOG
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_12_GENERATED_BODY_LEGACY \
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_17_PROLOG
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ElfBowling_Source_ElfBowling_PlayerPawn_h_12_PRIVATE_PROPERTY_OFFSET \
-	ElfBowling_Source_ElfBowling_PlayerPawn_h_12_RPC_WRAPPERS \
-	ElfBowling_Source_ElfBowling_PlayerPawn_h_12_INCLASS \
-	ElfBowling_Source_ElfBowling_PlayerPawn_h_12_STANDARD_CONSTRUCTORS \
+	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_PRIVATE_PROPERTY_OFFSET \
+	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_RPC_WRAPPERS \
+	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_INCLASS \
+	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ElfBowling_Source_ElfBowling_PlayerPawn_h_12_GENERATED_BODY \
+#define ElfBowling_Source_ElfBowling_PlayerPawn_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ElfBowling_Source_ElfBowling_PlayerPawn_h_12_PRIVATE_PROPERTY_OFFSET \
-	ElfBowling_Source_ElfBowling_PlayerPawn_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	ElfBowling_Source_ElfBowling_PlayerPawn_h_12_INCLASS_NO_PURE_DECLS \
-	ElfBowling_Source_ElfBowling_PlayerPawn_h_12_ENHANCED_CONSTRUCTORS \
+	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_PRIVATE_PROPERTY_OFFSET \
+	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_INCLASS_NO_PURE_DECLS \
+	ElfBowling_Source_ElfBowling_PlayerPawn_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -90,4 +90,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #define CURRENT_FILE_ID ElfBowling_Source_ElfBowling_PlayerPawn_h
 
 
+#define FOREACH_ENUM_EPHASEENUM(op) \
+	op(EPhaseEnum::Power) \
+	op(EPhaseEnum::Launch) \
+	op(EPhaseEnum::Check) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

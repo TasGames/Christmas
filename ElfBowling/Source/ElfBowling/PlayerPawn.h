@@ -6,6 +6,14 @@
 #include "GameFramework/Pawn.h"
 #include "PlayerPawn.generated.h"
 
+UENUM(BlueprintType)
+enum class EPhaseEnum : uint8
+{
+	Power 	UMETA(DisplayName = "Power"),
+	Launch 	UMETA(DisplayName = "Launch"),
+	Check	UMETA(DisplayName = "Check"),
+};
+
 UCLASS()
 class ELFBOWLING_API APlayerPawn : public APawn
 {

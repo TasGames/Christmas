@@ -93,7 +93,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ADestroyBall); \
 
 
 #define ElfBowling_Source_ElfBowling_DestroyBall_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__BoxComponent() { return STRUCT_OFFSET(ADestroyBall, BoxComponent); }
+	FORCEINLINE static uint32 __PPO__BoxComponent() { return STRUCT_OFFSET(ADestroyBall, BoxComponent); } \
+	FORCEINLINE static uint32 __PPO__E() { return STRUCT_OFFSET(ADestroyBall, E); } \
+	FORCEINLINE static uint32 __PPO__P() { return STRUCT_OFFSET(ADestroyBall, P); }
 
 
 #define ElfBowling_Source_ElfBowling_DestroyBall_h_9_PROLOG

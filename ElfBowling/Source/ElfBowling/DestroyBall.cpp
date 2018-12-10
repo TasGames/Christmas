@@ -3,6 +3,9 @@
 #include "DestroyBall.h"
 #include "BowlingBall.h"
 #include "Components/BoxComponent.h"
+#include "ElfController.h"
+#include "EngineUtils.h"
+#include "PlayerPawn.h"
 
 // Sets default values
 ADestroyBall::ADestroyBall()
@@ -23,6 +26,15 @@ void ADestroyBall::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	UWorld* World = GetWorld();
+
+	for (TActorIterator<APlayerPawn> It(World, APlayerPawn::StaticClass()); It; ++It)
+	{
+		APlayerPawn* PP = *It;
+
+		if (PP != NULL)
+			P = PP;
+	}
 }
 
 // Called every frame
@@ -39,7 +51,12 @@ void ADestroyBall::OnBeginOverlap(UPrimitiveComponent * OverlappedComp, AActor *
 		ABowlingBall *B = Cast<ABowlingBall>(OtherActor);
 		if (B != NULL)
 		{
+			B->Destroy();
 
+			if (E != NULL)
+			{
+				
+			}
 		}
 	}
 }

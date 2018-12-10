@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_ElfBowling();
 	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UAudioComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void ABowlingBall::StaticRegisterNativesABowlingBall()
@@ -37,6 +38,10 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileMovement_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ProjectileMovement;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Roll_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Roll;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Ball_MetaData[];
 #endif
@@ -64,6 +69,14 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABowlingBall_Statics::NewProp_ProjectileMovement = { UE4CodeGen_Private::EPropertyClass::Object, "ProjectileMovement", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x00100000000b0009, 1, nullptr, STRUCT_OFFSET(ABowlingBall, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABowlingBall_Statics::NewProp_ProjectileMovement_MetaData, ARRAY_COUNT(Z_Construct_UClass_ABowlingBall_Statics::NewProp_ProjectileMovement_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABowlingBall_Statics::NewProp_Roll_MetaData[] = {
+		{ "Category", "Sound" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "BowlingBall.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABowlingBall_Statics::NewProp_Roll = { UE4CodeGen_Private::EPropertyClass::Object, "Roll", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x001000000008000d, 1, nullptr, STRUCT_OFFSET(ABowlingBall, Roll), Z_Construct_UClass_UAudioComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABowlingBall_Statics::NewProp_Roll_MetaData, ARRAY_COUNT(Z_Construct_UClass_ABowlingBall_Statics::NewProp_Roll_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABowlingBall_Statics::NewProp_Ball_MetaData[] = {
 		{ "Category", "Mesh" },
 		{ "EditInline", "true" },
@@ -73,6 +86,7 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABowlingBall_Statics::NewProp_Ball = { UE4CodeGen_Private::EPropertyClass::Object, "Ball", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(ABowlingBall, Ball), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABowlingBall_Statics::NewProp_Ball_MetaData, ARRAY_COUNT(Z_Construct_UClass_ABowlingBall_Statics::NewProp_Ball_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABowlingBall_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABowlingBall_Statics::NewProp_ProjectileMovement,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABowlingBall_Statics::NewProp_Roll,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABowlingBall_Statics::NewProp_Ball,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABowlingBall_Statics::StaticCppClassTypeInfo = {
@@ -98,7 +112,7 @@ void EmptyLinkFunctionForGeneratedCodeBowlingBall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABowlingBall, 713117675);
+	IMPLEMENT_CLASS(ABowlingBall, 3974384453);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ABowlingBall(Z_Construct_UClass_ABowlingBall, &ABowlingBall::StaticClass, TEXT("/Script/ElfBowling"), TEXT("ABowlingBall"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ABowlingBall);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
